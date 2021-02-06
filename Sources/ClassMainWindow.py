@@ -23,12 +23,7 @@ class MainWindow(QtWidgets.QMainWindow):
         widget = QtWidgets.QWidget()
         layout = QtWidgets.QVBoxLayout()
 
-        coordinates = (37.8198, -122.4785)
-        m = folium.Map(
-            title = "TODO",
-            zoom_start = 13,
-            location = coordinates
-        )
+        m = folium.Map(location=(45.5576996, -73.7304841), zoom_start=10)
         data = io.BytesIO()
         m.save(data, close_file=False)
 
