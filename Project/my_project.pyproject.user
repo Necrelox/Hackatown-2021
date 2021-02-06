@@ -167,7 +167,7 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">main</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">my_project</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration./home/ruby/Documents/C++/Progamme GUI/HackaTown/main.py</value>
     <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/ruby/Documents/C++/Progamme GUI/HackaTown/main.py</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{b1e0b6bd-dd6b-45f3-ad6d-744bea937ba2}</value>
