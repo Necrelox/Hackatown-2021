@@ -6,11 +6,11 @@
 ## main file
 ##
 
-from ClassMainWindow import MainWindow
-from ClassAerialMap import AerialMap
 import sys
-import os
+import folium
 
+from ClassAerialMap import AerialMap
+from ClassMainWindow import MainWindow
 from PySide2 import QtCore, QtWidgets
 from PySide2.QtGui import QIcon
 from PySide2.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
@@ -22,7 +22,6 @@ if __name__ == "__main__":
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_ShareOpenGLContexts)
     app = QApplication([])
     widget = MainWindow()
-    # map_widget = AerialMap()
-    widget.show()
-#    map_widget.show()
+    map_widget = AerialMap()
+    map_widget.show()
     sys.exit(app.exec_())

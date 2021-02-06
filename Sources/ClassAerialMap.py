@@ -9,7 +9,7 @@
 import folium
 import io
 from PySide2 import QtCore, QtWidgets
-from PySide2.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 class AerialMap(QWidget):
