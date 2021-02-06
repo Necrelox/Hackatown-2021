@@ -10,8 +10,12 @@ import sys
 from PyQt5 import QtWidgets
 from ClassMainWindow import MainWindow
 
-if __name__ == "__main__":
+def main():
     app = QtWidgets.QApplication([])
     widget = MainWindow()
     widget.show()
     sys.exit(app.exec_())
+    return 0
+
+if __name__ == "__main__":
+    main()
