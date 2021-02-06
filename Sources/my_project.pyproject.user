@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.0, 2021-02-06T02:45:23. -->
+<!-- Written by QtCreator 4.14.0, 2021-02-06T16:35:28. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -168,15 +168,15 @@
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">my_project</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration./home/ruby/Documents/C++/Progamme GUI/HackaTown/main.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/ruby/Documents/C++/Progamme GUI/HackaTown/main.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration./home/ruby/Documents/Python/Programme GUI/Hackatown-2021/Sources/my_project</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/ruby/Documents/Python/Programme GUI/Hackatown-2021/Sources/my_project</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{b1e0b6bd-dd6b-45f3-ad6d-744bea937ba2}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">/home/ruby/Documents/C++/Progamme GUI/HackaTown/main.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">/home/ruby/Documents/Python/Programme GUI/Hackatown-2021/Sources/my_project</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/ruby/Documents/C++/Progamme GUI/HackaTown</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/ruby/Documents/Python/Programme GUI/Hackatown-2021/Sources</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

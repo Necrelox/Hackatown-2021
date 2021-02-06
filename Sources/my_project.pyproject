@@ -1,0 +1,3 @@
+{
+    "files": ["Sources/my_project", "../Widget_Ui/form.ui", "Sources/MainWindow", "Sources/AerialMap"]
+}
