@@ -54,4 +54,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         self.load_ui()
+        screen = QtWidgets.QDesktopWidget().screenGeometry()
+        self.size = self.geometry()
+        self.move((screen.width() - self.size.width()) // 2, (screen.height() - self.size.height()) // 2)
         self.load_map()

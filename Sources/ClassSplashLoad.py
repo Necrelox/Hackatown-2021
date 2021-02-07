@@ -17,27 +17,6 @@ counter = 0
 jumper = 10
 
 class SplashLoad(QtWidgets.QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
-        self.ui = Ui_ringProgress()
-        self.ui.setupUi(self)
-
-        self.progressBarValue(0)
-
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-
-        self.shadow = QGraphicsDropShadowEffect(self)
-        self.shadow.setBlurRadius(20)
-        self.shadow.setXOffset(0)
-        self.shadow.setYOffset(0)
-        self.shadow.setColor(QColor(0, 0, 0, 120))
-        self.ui.circularBg.setGraphicsEffect(self.shadow)
-        
-        self.timer = QtCore.QTimer()
-        self.timer.timeout.connect(self.progress)
-        self.timer.start(15)
-        self.show()
 
     def progress (self):
         global counter
@@ -70,3 +49,30 @@ class SplashLoad(QtWidgets.QMainWindow):
         stop_2 = str(progress)
         newStylesheet = styleSheet.replace("{STOP_1}", stop_1).replace("{STOP_2}", stop_2)
         self.ui.circularProgress.setStyleSheet(newStylesheet)
+
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_ringProgress()
+        self.ui.setupUi(self)
+
+        
+        screen = QtWidgets.QDesktopWidget().screenGeometry()
+        self.size = self.geometry()
+        self.move((screen.width() - self.size.width()) // 2, (screen.height() - self.size.height()) // 2)
+        
+        self.progressBarValue(0)
+
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(20)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(0, 0, 0, 120))
+        self.ui.circularBg.setGraphicsEffect(self.shadow)
+
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.progress)
+        self.timer.start(15)
+        self.show()
