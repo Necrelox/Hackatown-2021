@@ -9,13 +9,12 @@
 import sys
 from PyQt5 import QtWidgets
 from ClassMainWindow import MainWindow
+from ClassSplashLoad import SplashLoad
 
 def main():
     app = QtWidgets.QApplication([])
-    widget = MainWindow()
-    widget.show()
+    window = SplashLoad()
     sys.exit(app.exec_())
-    return 0
 
 if __name__ == "__main__":
     main()
