@@ -1,17 +1,16 @@
-#!/usr/bin/env python3
-##
-## EPITECH PROJECT, 2021
+#
+## HACKATOWN PROJECT, 2021
 ## Hackatown-2021
 ## File description:
 ## ClassSplashLoad
 ##
 
-from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2 import (QtCore, QtGui, QtWidgets)
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
-from ClassUi_ringProgress import Ui_ringProgress
-from ClassMainWindow import MainWindow
+from .ClassUi_ringProgress import Ui_ringProgress
+from .ClassMainWindow import MainWindow
 
 counter = 0
 jumper = 10
@@ -55,11 +54,11 @@ class SplashLoad(QtWidgets.QMainWindow):
         self.ui = Ui_ringProgress()
         self.ui.setupUi(self)
 
-        
+
         screen = QtWidgets.QDesktopWidget().screenGeometry()
         self.size = self.geometry()
         self.move((screen.width() - self.size.width()) // 2, (screen.height() - self.size.height()) // 2)
-        
+
         self.progressBarValue(0)
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)

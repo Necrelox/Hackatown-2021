@@ -8,13 +8,10 @@
 
 import sys
 from PyQt5 import QtWidgets
-from ClassMainWindow import MainWindow
-from ClassSplashLoad import SplashLoad
+from .ClassMainWindow import MainWindow
+from .ClassSplashLoad import SplashLoad
 
 def main():
     app = QtWidgets.QApplication([])
     window = SplashLoad()
     sys.exit(app.exec_())
-
-if __name__ == "__main__":
-    main()

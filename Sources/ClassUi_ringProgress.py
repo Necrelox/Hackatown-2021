@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'ringProgressgxxQqu.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.2
+## HACKATOWN PROJECT, 2021
+## Hackatown-2021
+## File description:
+## main file
 ##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
 
 from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QMetaObject,
     QObject, QPoint, QRect, QSize, QTime, QUrl, Qt)
@@ -107,4 +105,3 @@ class Ui_ringProgress(object):
         self.labelTitle.setText(QCoreApplication.translate("ringProgress", u"<strong>Bernard</strong>", None))
         self.labelPercentage.setText(QCoreApplication.translate("ringProgress", u"<html><head/><body><p>0<span style=\" font-size:58pt; vertical-align:super;\">%</span></p></body></html>", None))
     # retranslateUi
-

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ##
 ## EPITECH PROJECT, 2021
 ## Hackatown-2021
@@ -18,8 +17,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.window_height = 800
         self.window_width = 1200
         self.setMinimumSize(self.window_width, self.window_height)
-        self.setWindowTitle("TODO")
-        self.setWindowIcon(QtGui.QIcon('TODO'))
+        self.setWindowTitle("Bernard")
+        self.setWindowIcon(QtGui.QIcon('../assets/icon.png'))  # icon by: dtafalonso, all credits go to them
 
     def get_data(self):
         loc = requests.get("https://ipinfo.io/json")
@@ -33,11 +32,11 @@ class MainWindow(QtWidgets.QMainWindow):
             dico = {}
             for i in range(len(pol)):
                 dico[list(pol)[i]] = list(list(pol.values())[i].values())[0]
-            m = folium.Map(location=loc, zoom_start=15, no_touch=True)
+            m = folium.Map(location=loc, zoom_start=15, no_touch=True, scale_bar=True)
             city_marker = folium.Marker(location=loc, popup=city)
             m.add_child(city_marker)
         return m
-        
+
 
     def load_map(self):
         widget = QtWidgets.QWidget()
