@@ -8,9 +8,12 @@
 import io
 import folium
 import requests
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWebEngineWidgets import QWebEngineView
+from .get_grid import get_grid
 
 class MainWindow(QtWidgets.QMainWindow):
     def load_ui(self):
@@ -20,6 +23,31 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowTitle("Bernard")
         self.setWindowIcon(QtGui.QIcon('../assets/icon.png'))  # icon by: dtafalonso, all credits go to them
 
+    def build_grid(self, loc, m):
+        p1 = [float(loc[0]) - 0.03, float(loc[1]) - 0.03]
+        p2 = [float(loc[0]) + 0.03, float(loc[1]) + 0.03]
+        grid = get_grid(p1, p2, 20)
+
+        for i, geo_json in enumerate(grid):
+            color = plt.cm.Reds(i / len(grid))
+            color = mpl.colors.to_hex(color)
+
+            gj = folium.GeoJson(
+                geo_json,
+                style_function=lambda feature,
+                color=color: {
+                    'fillColor': color,
+                    'color':"black",
+                    'weight': 2,
+                    'dashArray': '5, 5',
+                    'fillOpacity': 0.40,
+                })
+            popup = folium.Popup("Test {}".format(i))
+            gj.add_child(popup)
+            m.add_child(gj)
+        m
+
+    # Using ipinfo.io/json for a more accurate geolocalisation.
     def get_data(self):
         loc = requests.get("https://ipinfo.io/json")
         city = loc.json()['city']
@@ -35,6 +63,7 @@ class MainWindow(QtWidgets.QMainWindow):
             m = folium.Map(location=loc, zoom_start=15, no_touch=True, scale_bar=True)
             city_marker = folium.Marker(location=loc, popup=city)
             m.add_child(city_marker)
+            self.build_grid(loc, m)
         return m
 
 
