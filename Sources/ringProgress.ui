@@ -64,7 +64,7 @@
      <property name="styleSheet">
       <string notr="true">QFrame {
 	border-radius: 150px;
-	background-color: rgb(77, 77, 127, 120);
+	background-color: rgba(77, 77, 127, 120);
 }</string>
      </property>
      <property name="frameShape">

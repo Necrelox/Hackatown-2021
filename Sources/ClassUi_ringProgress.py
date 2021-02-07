@@ -41,7 +41,7 @@ class Ui_ringProgress(object):
         self.circularBg.setGeometry(QRect(10, 10, 300, 300))
         self.circularBg.setStyleSheet(u"QFrame {\n"
 "	border-radius: 150px;\n"
-"	background-color: rgb(77, 77, 127, 120);\n"
+"	background-color: rgba(77, 77, 127, 120);\n"
 "}")
         self.circularBg.setFrameShape(QFrame.NoFrame)
         self.circularBg.setFrameShadow(QFrame.Raised)
